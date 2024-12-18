@@ -1,0 +1,111 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #121212;
+    color: #ffffff;
+    overflow-x: hidden;
+    transition: background-color 0.5s ease;
+}
+
+/* Header and Tabs */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #1e1e1e;
+    z-index: 1000;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.tab {
+    background: none;
+    border: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.tab:hover,
+.tab.active {
+    border-bottom: 2px solid currentColor;
+}
+
+.tab[data-tab="tab1"] {
+    color: #ff6f61; /* Coral */
+}
+
+.tab[data-tab="tab2"] {
+    color: #6b5b95; /* Purple */
+}
+
+.tab[data-tab="tab3"] {
+    color: #88b04b; /* Green */
+}
+
+/* Main Content */
+main {
+    padding-top: 80px; /* To avoid content hidden behind fixed header */
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-content h1 {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px currentColor;
+}
+
+.tab-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tab-content img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+}
+
+/* Background color transitions for each tab */
+#tab1 {
+    --tab-color: #ff6f61;
+    background: linear-gradient(to bottom, rgba(18,18,18,1), var(--tab-color));
+}
+
+#tab2 {
+    --tab-color: #6b5b95;
+    background: linear-gradient(to bottom, rgba(18,18,18,1), var(--tab-color));
+}
+
+#tab3 {
+    --tab-color: #88b04b;
+    background: linear-gradient(to bottom, rgba(18,18,18,1), var(--tab-color));
+}
+
+/* Saturate background on scroll */
+body.scrolled {
+    background-color: #1e1e1e;
+}
