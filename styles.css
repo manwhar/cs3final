@@ -1,4 +1,4 @@
-/* Global Styles */
+/* global styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -8,7 +8,7 @@ body {
     transition: background-color 0.5s ease;
 }
 
-/* Header and Tabs */
+/* headers/tabs */
 header {
     position: fixed;
     top: 0;
@@ -52,7 +52,7 @@ header {
     color: #88b04b; /* Green */
 }
 
-/* Main Content */
+/* main stuffs */
 main {
     padding-top: 80px; /* To avoid content hidden behind fixed header */
 }
@@ -89,7 +89,7 @@ main {
     margin: 20px auto;
 }
 
-/* Background color transitions for each tab */
+/* tab transitions */
 #tab1 {
     --tab-color: #ff6f61;
     background: linear-gradient(to bottom, rgba(18,18,18,1), var(--tab-color));
@@ -105,7 +105,7 @@ main {
     background: linear-gradient(to bottom, rgba(18,18,18,1), var(--tab-color));
 }
 
-/* Saturate background on scroll */
+/* saturate background on scroll */
 body.scrolled {
     background-color: #1e1e1e;
 }
